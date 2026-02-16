@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Meet Me 💗</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f7d6df;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: #f5c6d6;
+      font-family: Arial, sans-serif;
       text-align: center;
-      overflow: hidden;
     }
 
     .container {
-      padding: 20px;
+      position: relative;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 15px;
     }
 
     p {
-      font-size: 15px;
-      color: #444;
+      font-size: 16px;
       margin-bottom: 25px;
     }
 
     button {
-      padding: 12px 28px;
-      font-size: 16px;
+      padding: 14px 30px;
+      font-size: 18px;
       border: none;
       border-radius: 25px;
       cursor: pointer;
@@ -49,37 +46,14 @@
     }
 
     #yes {
-      background-color: #ff4da6;
+      background: #ff3f8e;
       color: white;
     }
 
     #no {
-      background-color: #444;
+      background: #444;
       color: white;
-      position: relative;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    .theatre {
-      height: 100vh;
-      width: 100%;
-      background: black;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      animation: fadeIn 1.5s ease-in-out;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      position: absolute;
     }
   </style>
 </head>
@@ -87,29 +61,40 @@
 <body>
 
 <div class="container">
-  <h1>Shreyasuuuuu 🥺💗</h1>
+  <h1>Shreyasuuuu 🥺💗</h1>
   <h2>Will you meet me this month?</h2>
+
   <p>
     Don’t worry… I promise I won’t bite you. <br>
     And definitely no bite marks. Probably. 🙈
   </p>
 
   <button id="yes" onclick="sayYes()">YES 💞</button>
-  <button id="no" onclick="sayNo()">NO</button>
+  <button id="no" onclick="sayNo()" onmouseover="moveNo()">NO</button>
 </div>
 
 <script>
   function sayYes() {
     document.body.innerHTML = `
-      <div class="theatre">
-        <h1 style="font-size:40px; letter-spacing:3px;">
+      <div style="
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background:black;
+        color:white;
+        text-align:center;
+      ">
+        <h1 style="font-size:50px; letter-spacing:3px;">
           🎬 MEETING CONFIRMED 🎬
         </h1>
-        <p style="font-size:20px; line-height:1.8;">
+
+        <p style="font-size:22px;">
           Deep eye contact incoming 😏💗 <br><br>
           Hug level: 100% 🤗 <br>
           Nervous level: 1000% 😳 <br><br>
-          Brace yourself.
+          See you soon.
         </p>
       </div>
     `;
@@ -117,6 +102,14 @@
 
   function sayNo() {
     alert("Nachige apuje mulpala no panare… 😏\nPokade podu YES press manpule 💕");
+  }
+
+  function moveNo() {
+    var button = document.getElementById("no");
+    var x = Math.random() * 300;
+    var y = Math.random() * 300;
+    button.style.left = x + "px";
+    button.style.top = y + "px";
   }
 </script>
 
