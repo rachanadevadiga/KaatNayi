@@ -1,116 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Meet Me 💗</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f5c6d6;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    .container {
-      position: relative;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 16px;
-      margin-bottom: 25px;
-    }
-
-    button {
-      padding: 14px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      margin: 10px;
-      transition: 0.3s;
-    }
-
-    #yes {
-      background: #ff3f8e;
-      color: white;
-    }
-
-    #no {
-      background: #444;
-      color: white;
-      position: absolute;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Me 💗</title>
 </head>
 
-<body>
+<body style="
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f8d7df;
+  font-family:Arial, sans-serif;
+  text-align:center;
+">
 
-<div class="container">
-  <h1>Shreyasuuuu 🥺💗</h1>
-  <h2>Will you meet me this month?</h2>
+<div>
+  <h1 style="font-size:36px; margin-bottom:10px;">
+    Shreyasuuuu 🥺💗
+  </h1>
 
-  <p>
-    Don’t worry… I promise I won’t bite you. <br>
+  <h2 style="margin-bottom:20px;">
+    Will you meet me this month?
+  </h2>
+
+  <p style="margin-bottom:30px;">
+    Don’t worry… I promise I won’t bite you.<br>
     And definitely no bite marks. Probably. 🙈
   </p>
 
-  <button id="yes" onclick="sayYes()">YES 💞</button>
-  <button id="no" onclick="sayNo()" onmouseover="moveNo()">NO</button>
+  <button 
+    onclick="showYes()"
+    style="
+      padding:15px 30px;
+      font-size:18px;
+      border:none;
+      border-radius:25px;
+      background:#ff4da6;
+      color:white;
+      margin:10px;
+      cursor:pointer;
+    ">
+    YES 💞
+  </button>
+
+  <button 
+    onclick="showNo()"
+    style="
+      padding:15px 30px;
+      font-size:18px;
+      border:none;
+      border-radius:25px;
+      background:#444;
+      color:white;
+      margin:10px;
+      cursor:pointer;
+    ">
+    NO
+  </button>
 </div>
 
 <script>
-  function sayYes() {
-    document.body.innerHTML = `
-      <div style="
-        height:100vh;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        background:black;
-        color:white;
-        text-align:center;
-      ">
-        <h1 style="font-size:50px; letter-spacing:3px;">
-          🎬 MEETING CONFIRMED 🎬
-        </h1>
+function showYes() {
+  alert("🎬 MEETING CONFIRMED 🎬\n\nDeep eye contact incoming 😏\nHug level: 100% 🤗\nNervous level: 1000% 😳");
+}
 
-        <p style="font-size:22px;">
-          Deep eye contact incoming 😏💗 <br><br>
-          Hug level: 100% 🤗 <br>
-          Nervous level: 1000% 😳 <br><br>
-          See you soon.
-        </p>
-      </div>
-    `;
-  }
-
-  function sayNo() {
-    alert("Nachige apuje mulpala no panare… 😏\nPokade podu YES press manpule 💕");
-  }
-
-  function moveNo() {
-    var button = document.getElementById("no");
-    var x = Math.random() * 300;
-    var y = Math.random() * 300;
-    button.style.left = x + "px";
-    button.style.top = y + "px";
-  }
+function showNo() {
+  alert("Nachige apuje mulpala no panare 😏\nPokade podu YES press manpule 💕");
+}
 </script>
 
 </body>
