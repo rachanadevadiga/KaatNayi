@@ -75,14 +75,46 @@ button {
 </div>
 
 <script>
+<script>
 function sayYes() {
-  alert("Okay… deep eye contact incoming 😌💗\nHug level: 100%\nNervous level: 1000%\nSee you soon.");
+  document.body.innerHTML = `
+  <div style="
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    color:white;
+    text-align:center;
+    animation: fadeIn 1.5s ease-in-out;
+  ">
+    <h1 style="
+      font-size:50px;
+      letter-spacing:3px;
+      margin-bottom:20px;
+    ">
+      🎬 MEETING CONFIRMED 🎬
+    </h1>
+
+    <p style="font-size:22px; line-height:1.8;">
+      Deep eye contact incoming… 😏💗 <br><br>
+      Hug level: 100% 🤗 <br>
+      Nervous level: 1000% 😳 <br><br>
+      Brace yourself, Shreyasuuuu.
+    </p>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity:0; }
+      to { opacity:1; }
+    }
+  </style>
+  `;
 }
 
 function sayNo() {
-  alert("Nachige apuje mulpala no panare... 😏\nPokade podu YES press manpule 💕");
+  alert("Nachige apuje mulpala no panare… 😏\nPokade podu YES press manpule 💕");
 }
 </script>
-
-</body>
-</html>
